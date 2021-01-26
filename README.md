@@ -15,7 +15,7 @@ API для системы опросов пользователей
  * **DjangoRestFramework;**
  * **Docker.**
 
-Документация по API: [EMPTY](api.txt) \
+Документация по API (в стадии разработки): [EMPTY](api.txt) \
 Реализована в проекте по внутреннему url http://localhost:8000/docs/
 
 Возможна работа с внутренней базой sqlite без docker: \
