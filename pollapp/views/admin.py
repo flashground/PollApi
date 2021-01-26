@@ -3,6 +3,8 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAdminUser
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.response import Response
+
+from ..authentication import JWTAuthentication
 from ..models import Survey, Question
 from ..serializers.init import SurveyQuestionAdminSerializer, \
     SurveyCreateAdminSerializer, SurveyUpdateAdminSerializer, \
@@ -10,7 +12,8 @@ from ..serializers.init import SurveyQuestionAdminSerializer, \
 
 
 class SurveyAdminListCreate(generics.ListCreateAPIView):
-    # permission_classes = [IsAdminUser]
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAdminUser]
 
     def list(self, request, *args, **kwargs):
         serializer = SurveyCreateAdminSerializer(
@@ -29,7 +32,8 @@ class SurveyAdminListCreate(generics.ListCreateAPIView):
 
 
 class SurveyAdminRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
-    # permission_classes = [IsAdminUser]
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAdminUser]
     lookup_url_kwarg = 'survey_id'
 
     def retrieve(self, request, *args, **kwargs):
@@ -55,7 +59,8 @@ class SurveyAdminRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
 
 
 class SurveyQuestionsAdminListView(generics.ListCreateAPIView):
-    # permission_classes = [IsAdminUser]
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAdminUser]
     lookup_url_kwarg = 'survey_id'
 
     def list(self, request, *args, **kwargs):
@@ -77,7 +82,8 @@ class SurveyQuestionsAdminListView(generics.ListCreateAPIView):
 
 
 class SurveyQuestionAdminRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
-    # permission_classes = [IsAdminUser]
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAdminUser]
     lookup_url_kwarg = 'question_id'
 
     def retrieve(self, request, *args, **kwargs):
