@@ -8,6 +8,7 @@ from ..serializers.init import SurveyActiveSerializer, AnswerSerializer, \
 
 
 class SurveyActiveListView(generics.ListAPIView):
+    serializer_class = SurveyActiveSerializer
 
     def list(self, request, *args, **kwargs):
         serializer = SurveyActiveSerializer(
@@ -18,6 +19,7 @@ class SurveyActiveListView(generics.ListAPIView):
 
 
 class SurveyDetailView(generics.RetrieveAPIView):
+    serializer_class = SurveyQuestionsActiveSerializer
     lookup_url_kwarg = 'survey_id'
 
     def retrieve(self, request, *args, **kwargs):
@@ -33,6 +35,7 @@ class SurveyDetailView(generics.RetrieveAPIView):
 
 
 class UserAnswerDetailView(generics.RetrieveAPIView):
+    serializer_class = AnswerSerializer
     lookup_url_kwarg = 'user_id'
 
     def retrieve(self, request, *args, **kwargs):
@@ -47,6 +50,7 @@ class UserAnswerDetailView(generics.RetrieveAPIView):
 
 
 class AnswerCreateView(generics.CreateAPIView):
+    serializer_class = CreateAnswerSerializer
 
     def create(self, request, *args, **kwargs):
         serializer = CreateAnswerSerializer(data=request.data)

@@ -1,0 +1,653 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/v1/admin/survey/:
+    get:
+      operationId: listSurveyCreateAdmins
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SurveyCreateAdmin'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createSurveyCreateAdmin
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SurveyCreateAdmin'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SurveyCreateAdmin'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SurveyCreateAdmin'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SurveyCreateAdmin'
+          description: ''
+      tags:
+      - api
+  /api/v1/admin/survey/{survey_id}:
+    get:
+      operationId: retrieveSurveyUpdateAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SurveyUpdateAdmin'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateSurveyUpdateAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SurveyUpdateAdmin'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SurveyUpdateAdmin'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SurveyUpdateAdmin'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SurveyUpdateAdmin'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateSurveyUpdateAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SurveyUpdateAdmin'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SurveyUpdateAdmin'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SurveyUpdateAdmin'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SurveyUpdateAdmin'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroySurveyUpdateAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/v1/admin/survey/{survey_id}/questions/:
+    get:
+      operationId: listSurveyQuestionAdmins
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SurveyQuestionAdmin'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createSurveyQuestionAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SurveyQuestionAdmin'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SurveyQuestionAdmin'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SurveyQuestionAdmin'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SurveyQuestionAdmin'
+          description: ''
+      tags:
+      - api
+  /api/v1/admin/survey/{survey_id}/questions/{question_id}:
+    get:
+      operationId: retrieveQuestionCreateAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: question_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuestionCreateAdmin'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateQuestionCreateAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: question_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuestionCreateAdmin'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/QuestionCreateAdmin'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/QuestionCreateAdmin'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuestionCreateAdmin'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateQuestionCreateAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: question_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuestionCreateAdmin'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/QuestionCreateAdmin'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/QuestionCreateAdmin'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuestionCreateAdmin'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyQuestionCreateAdmin
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: question_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/v1/survey/:
+    get:
+      operationId: listSurveyActives
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SurveyActive'
+          description: ''
+      tags:
+      - api
+  /api/v1/survey/{survey_id}:
+    get:
+      operationId: retrieveSurveyQuestionsActive
+      description: ''
+      parameters:
+      - name: survey_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SurveyQuestionsActive'
+          description: ''
+      tags:
+      - api
+  /api/v1/user/{user_id}:
+    get:
+      operationId: retrieveAnswer
+      description: ''
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Answer'
+          description: ''
+      tags:
+      - api
+  /api/v1/login/:
+    post:
+      operationId: createlogin
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/v1/logout/:
+    post:
+      operationId: createlogout
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/v1/answer/:
+    post:
+      operationId: createCreateAnswer
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateAnswer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/CreateAnswer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CreateAnswer'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateAnswer'
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    SurveyCreateAdmin:
+      type: object
+      properties:
+        survey_id:
+          type: integer
+        title:
+          type: string
+          nullable: true
+          maxLength: 100
+        description:
+          type: string
+          nullable: true
+          maxLength: 300
+        active:
+          type: boolean
+        start_date:
+          type: string
+          format: date-time
+          nullable: true
+        finish_date:
+          type: string
+          format: date-time
+          nullable: true
+        created_date:
+          type: string
+          format: date-time
+          readOnly: true
+    SurveyUpdateAdmin:
+      type: object
+      properties:
+        survey_id:
+          type: integer
+        title:
+          type: string
+          nullable: true
+          maxLength: 100
+        description:
+          type: string
+          nullable: true
+          maxLength: 300
+        active:
+          type: boolean
+        start_date:
+          type: string
+          format: date-time
+          readOnly: true
+        finish_date:
+          type: string
+          format: date-time
+          nullable: true
+        created_date:
+          type: string
+          format: date-time
+          readOnly: true
+    SurveyQuestionAdmin:
+      type: object
+      properties:
+        question_id:
+          type: integer
+        type:
+          enum:
+          - text
+          - select
+          - select-multiple
+          type: string
+        text:
+          type: string
+          nullable: true
+          maxLength: 4096
+        choices:
+          type: string
+          nullable: true
+        active:
+          type: boolean
+        created_date:
+          type: string
+          format: date-time
+          readOnly: true
+    QuestionCreateAdmin:
+      type: object
+      properties:
+        survey:
+          type: integer
+          nullable: true
+        question_id:
+          type: integer
+          readOnly: true
+        question:
+          type: string
+        type:
+          enum:
+          - text
+          - select
+          - select-multiple
+          type: string
+        choices:
+          type: string
+          nullable: true
+        active:
+          type: boolean
+        updated_date:
+          type: string
+          format: date-time
+          readOnly: true
+        created_date:
+          type: string
+          format: date-time
+          readOnly: true
+    SurveyActive:
+      type: object
+      properties:
+        survey_id:
+          type: integer
+        title:
+          type: string
+          nullable: true
+          maxLength: 100
+        description:
+          type: string
+          nullable: true
+          maxLength: 300
+        start_date:
+          type: string
+          format: date-time
+          nullable: true
+        finish_date:
+          type: string
+          format: date-time
+          nullable: true
+      required:
+      - survey_id
+    SurveyQuestionsActive:
+      type: object
+      properties:
+        survey_id:
+          type: integer
+        title:
+          type: string
+          nullable: true
+          maxLength: 100
+        description:
+          type: string
+          nullable: true
+          maxLength: 300
+        start_date:
+          type: string
+          format: date-time
+          nullable: true
+        finish_date:
+          type: string
+          format: date-time
+          nullable: true
+        questions:
+          type: array
+          items:
+            type: object
+            properties:
+              question_id:
+                type: integer
+              type:
+                enum:
+                - text
+                - select
+                - select-multiple
+                type: string
+              text:
+                type: string
+                nullable: true
+                maxLength: 4096
+              choices:
+                type: string
+                nullable: true
+            required:
+            - question_id
+      required:
+      - survey_id
+      - questions
+    Answer:
+      type: object
+      properties:
+        survey_id:
+          type: integer
+        survey_name:
+          type: string
+        question_id:
+          type: integer
+        question_text:
+          type: string
+        answer_id:
+          type: integer
+        answer_text:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - survey_id
+      - survey_name
+      - question_id
+      - question_text
+      - answer_id
+      - answer_text
+    CreateAnswer:
+      type: object
+      properties:
+        user:
+          type: integer
+        question:
+          type: integer
+        text:
+          type: string
+          maxLength: 4096
+      required:
+      - user
+      - question
+      - text

@@ -1,6 +1,9 @@
 from pathlib import Path
 import os
 
+# from dotenv import load_dotenv
+# load_dotenv('.env.local') if os.path.exists('.env.local') else load_dotenv('.env.dev')
+
 try:
     from dotenv import load_dotenv
     load_dotenv('.env.local') if os.path.exists('.env.local') else load_dotenv('.env.dev')
@@ -104,3 +107,5 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }

@@ -14,6 +14,7 @@ from ..serializers.init import SurveyQuestionAdminSerializer, \
 class SurveyAdminListCreate(generics.ListCreateAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAdminUser]
+    serializer_class = SurveyCreateAdminSerializer
 
     def list(self, request, *args, **kwargs):
         serializer = SurveyCreateAdminSerializer(
@@ -34,6 +35,7 @@ class SurveyAdminListCreate(generics.ListCreateAPIView):
 class SurveyAdminRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAdminUser]
+    serializer_class = SurveyUpdateAdminSerializer
     lookup_url_kwarg = 'survey_id'
 
     def retrieve(self, request, *args, **kwargs):
@@ -61,6 +63,7 @@ class SurveyAdminRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
 class SurveyQuestionsAdminListView(generics.ListCreateAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAdminUser]
+    serializer_class = SurveyQuestionAdminSerializer
     lookup_url_kwarg = 'survey_id'
 
     def list(self, request, *args, **kwargs):
@@ -84,6 +87,7 @@ class SurveyQuestionsAdminListView(generics.ListCreateAPIView):
 class SurveyQuestionAdminRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAdminUser]
+    serializer_class = QuestionCreateAdminSerializer
     lookup_url_kwarg = 'question_id'
 
     def retrieve(self, request, *args, **kwargs):
