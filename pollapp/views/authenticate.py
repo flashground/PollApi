@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework.decorators import api_view
-from rest_framework import generics, exceptions
+from rest_framework import exceptions
 from rest_framework.response import Response
 
 from pollapp.authentication import generate_access_token
@@ -8,9 +8,9 @@ from pollapp.authentication import generate_access_token
 
 @api_view(['POST'])
 def login(request):
-    login = request.data.get('login')
+    login_name = request.data.get('login')
     password = request.data.get('password')
-    user = User.objects.filter(username=login).first()
+    user = User.objects.filter(username=login_name).first()
 
     if User is None:
         raise exceptions.AuthenticationFailed('User not found')
@@ -26,8 +26,9 @@ def login(request):
 
     return response
 
+
 @api_view(['POST'])
-def logout(request):
+def logout(_):
     response = Response()
     response.delete_cookie(key='jwt')
     response.data = {

@@ -6,6 +6,7 @@ urlpatterns = [
     path('login/', login),
     path('logout/', logout),
 
+
     path('admin/survey/', SurveyAdminListCreate.as_view()),
     path('admin/survey/<str:survey_id>',
          SurveyAdminRetrieveUpdateDestroy.as_view()),
