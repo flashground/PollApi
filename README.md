@@ -18,9 +18,16 @@ API для системы опросов пользователей
 Документация по API: [EMPTY](api.txt)
 
 Возможна работа с внутренней базой sqlite без docker: \
+ * Установка виртуального окружения:\
+`python -m venv env`\
+ * Активация окружения:\
+`env\Scripts\activate`\
+ * Установка зависимостей:\
+`pip install -r requirements.txt`\
+ * Запуск приложения:\
 `python manage.py runserver`
 
-Сборка образа и запуск:\
+Сборка образа docker и запуск:\
 `docker-compose up -d --build`
 
 ##TODO:
