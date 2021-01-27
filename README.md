@@ -18,18 +18,21 @@ API для системы опросов пользователей
 Документация по API (в стадии разработки): [EMPTY](api.txt) \
 Реализована в проекте по внутреннему url http://localhost:8000/docs/
 
-Возможна работа с внутренней базой sqlite без docker: \
+Возможна работа с внутренней базой sqlite без docker:
  * Установка виртуального окружения:\
-`python -m venv env`\
+`python -m venv env`
  * Активация окружения:\
-`env\Scripts\activate`\
+`env\Scripts\activate`
  * Установка зависимостей:\
-`pip install -r requirements.txt`\
+`pip install -r requirements.txt`
  * Запуск приложения:\
 `python manage.py runserver`
 
 Сборка образа docker и запуск:\
 `docker-compose up -d --build`
+
+Логин/пароль администратора: \
+`admin/admin`
 
 ##TODO:
 * документация
