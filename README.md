@@ -10,9 +10,10 @@ API для системы опросов пользователей
  
 Использовал:
  * **Django 2.2;**
+ * **DjangoRestFramework;**
+ * **JWT token;**
  * **sqlite3;**
  * **PostgreSQL;**
- * **DjangoRestFramework;**
  * **Docker.**
 
 Документация по API (в стадии разработки): [EMPTY](api.txt) \
