@@ -1,14 +1,14 @@
 "# PollApi" \
-API для системы опросов пользователей
+API for user surveys
 
-Задание: [TASK](task.txt) 
+Task: [TASK](task.txt) 
 
-Кратко: 
- * CRUD опросов и вопросов в них для администраторов,
- * прохождение опросов (создание ответов),
- * просмотр ответов по user id.
+Briefly: 
+ * CRUD surveys and questions in them for administrators,
+ * Passing through surveys (creating responses),
+ * Viewing responses by user id.
  
-Использовал:
+Used:
  * **Django 2.2;**
  * **DjangoRestFramework;**
  * **JWT token;**
@@ -16,26 +16,26 @@ API для системы опросов пользователей
  * **PostgreSQL;**
  * **Docker.**
 
-Документация по API (в стадии разработки): [EMPTY](api.txt) \
-Реализована в проекте по внутреннему url http://localhost:8000/docs/
+API documentation (under development): [EMPTY](api.txt) \
+Implemented in the project by internal url http://localhost:8000/docs/
 
-Возможна работа с внутренней базой sqlite без docker:
- * Установка виртуального окружения:\
-`python -m venv env`
- * Активация окружения:\
-`env\Scripts\activate`
- * Установка зависимостей:\
-`pip install -r requirements.txt`
- * Запуск приложения:\
-`python manage.py runserver`
+Possible to work with internal sqlite database without docker:
+ * Installing the virtual environment:\
+`python -m venv env`.
+ * Activating the environment:\
+`env\Scripts\activate`.
+ * Installing dependencies:\
+\pip install -r requirements.txt
+ * Running the application:\
+`python manage.py runserver
 
-Сборка образа docker и запуск:\
-`docker-compose up -d --build`
+Build a docker image and run it:\
+`docker-compose up -d --build`.
 
-Логин/пароль администратора: \
-`admin/admin`
+Administrator login/password: \
+`admin/admin
 
 ##TODO:
-* документация
-* тесты
-* наполнение БД (сохрание в дамп)
+* documentation
+* tests
+* filling the database (saving to dump)
